@@ -1,0 +1,84 @@
+<html lang="en">
+</head>
+	<title> AR.js </title>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <!-- Remove if you want some more debug options -->
+  <style>
+	  #arjsDebugUIContainer{ display: none!important; }
+	</style>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs> 
+    <a-marker preset="hiro">
+      <!-- Avert thine eyes, this ain't pretty -->
+      <a-box position="0 0.5 0" height="2" width="1" depth="1" color="#555454" material="opacity:0">
+
+            <a-box position="0 0.6 0.5" 
+            height="0.1" 
+            width="0.20" 
+            depth="0.15"
+            color="#D9C078" material="opacity:1">
+            </a-box>
+
+
+            <a-box position="0 0.48 0.5" 
+            height="0.20" 
+            width="0.20" 
+            depth="0.15"
+            color="#EAC086" material="opacity:1">
+            </a-box>
+
+            <a-box position="0 0.37 0.5" 
+            height="0.05" 
+            width="0.16" 
+            depth="0.1"
+            color="#EAC086" material="opacity:1">
+            </a-box>
+
+            <a-box position="0.18 0.05 0.5" 
+            height="0.6" 
+            width="0.07" 
+            depth="0.1"
+            color="#645264" material="opacity:1">
+            </a-box>
+
+            <a-box position="-0.18 0.05 0.5" 
+            height="0.6" 
+            width="0.07" 
+            depth="0.1"
+            color="#645264" material="opacity:1">
+            </a-box>
+            
+            <a-box position="0 0.10 0.5" 
+            height="0.5" 
+            width="0.3" 
+            depth="0.2"
+            color="#645264" material="opacity:1">
+            </a-box>
+
+            <a-box position="0 -0.20 0.5" 
+            height="0.1" 
+            width="0.3" 
+            depth="0.1"
+            color="#555454" material="opacity:1">
+            </a-box>
+            
+            <a-box position="-0.1 -0.5 0.5" 
+            height="0.5" 
+            width="0.1" 
+            depth="0.1"
+            color="#555454" material="opacity:1">
+            </a-box>
+            <a-box position="0.1 -0.5 0.5" 
+            height="0.5" 
+            width="0.1" 
+            depth="0.1"
+            color="#555454" material="opacity:1">
+            </a-box>   
+         </a-box>
+	</a-marker>
+    <a-entity camera> </a-entity> 
+  </a-scene>
+</body>
+</html>
