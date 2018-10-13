@@ -1,0 +1,23 @@
+<html lang="en">
+</head>
+	<title> AR.js </title>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <!-- Remove if you want some more debug options -->
+  <style>
+	  #arjsDebugUIContainer{ display: none!important; }
+	</style>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs> 
+    <a-marker preset="hiro">
+      <!-- Avert thine eyes, this ain't pretty -->
+          <a-entity
+      geometry="primitive: plane; width: 4; height: auto"
+      material="color: blue"
+      text="value: Hello there, welcome to AR js."></a-entity>
+	</a-marker>
+    <a-entity camera> </a-entity> 
+  </a-scene>
+</body>
+</html>
