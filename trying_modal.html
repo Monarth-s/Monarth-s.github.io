@@ -1,0 +1,29 @@
+<html lang="en">
+</head>
+	<title> AR.js </title>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+	<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <!-- Remove if you want some more debug options -->
+  <style>
+	  #arjsDebugUIContainer{ display: none!important; }
+	</style>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs> 
+    <a-marker preset="hiro">
+      <!-- Avert thine eyes, this ain't pretty -->
+      <a-box position="0 0.5 0" height="2" width="1" depth="1" color="#555454" material="opacity:0">
+
+            <!-- define your gltf asset -->
+            <a-assets>
+              <a-asset-item id="tree" src="./source/tree.gltf"></a-asset-item>
+            </a-assets>
+            <!-- use your gltf model -->
+            <a-entity gltf-model="##tree"></a-entity>
+           
+         </a-box>
+	</a-marker>
+    <a-entity camera> </a-entity> 
+  </a-scene>
+</body>
+</html>
