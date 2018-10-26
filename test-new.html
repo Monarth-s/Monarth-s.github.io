@@ -10,15 +10,14 @@
 </head>
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs> 
+	  
     <a-marker preset="hiro">
       <!-- Avert thine eyes, this ain't pretty -->
 	    
-     <a-assets>
-      <a-asset-item id="bottle" src="./source/bottle.gltf"></a-asset-item>
-    </a-assets>
-    <!-- use your gltf model -->
-    <a-entity gltf-model="##bottle"></a-entity>
-
+	    <a-entity gltf-model-next="src: url('./source/bottle.gltf');" >
+	    </a-entity>
+    
+ 
      
 
 	</a-marker>
