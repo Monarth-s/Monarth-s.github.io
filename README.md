@@ -1,2 +1,2 @@
-# ar-demo.github.io
+# AR JS Demos
 Demo AR Page
