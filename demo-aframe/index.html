@@ -18,9 +18,10 @@
 </head>
 
 <body>
-  <a-scene>
+  <a-scene embedded arjs>
     <a-entity gltf-model="assets/animatedbox.gltf"></a-entity>
     <a-sky color="#ECECEC"></a-sky>
+    <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
   <script src="app.js"></script>
 </body>
