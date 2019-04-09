@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QCodeDecoder - Camera</title>
+      
+     <style>
+     
+     
+     .video-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%; 
+        overflow: hidden;
+      }
+      .video-container video {
+        /* Make video to at least 100% wide and tall */
+        min-width: 100%; 
+        min-height: 100%; 
+
+        /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+        width: auto;
+        height: auto;
+
+        /* Center the video */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+     
+     </style>
+    
+  </head>
+  <body>
+
+  <div class="video-container">
+    <video autoplay></video>
+  </div>
+  
+  <button id="reset">Reset</button>
+  <button id="stop" >Stop</button>
+
+  <script src="./qrcode-decoder-edited.js"></script>
+  <script type="text/javascript">
+  (function () {
+    'use strict';
+    var qr = new QCodeDecoder();
+    if (!(qr.isCanvasSupported() && qr.hasGetUserMedia())) {
+      alert('Your browser doesn\'t match the required specs.');
+      throw new Error('Canvas and getUserMedia are required');
+    }
+    var video = document.querySelector('video');
+    var reset = document.querySelector('#reset');
+    var stop = document.querySelector('#stop');
+    function resultHandler (err, result) {
+      if (err)
+        return console.log(err.message);
+      alert(result);
+    }
+    // prepare a canvas element that will receive
+    // the image to decode, sets the callback for
+    // the result and then prepares the
+    // videoElement to send its source to the
+    // decoder.
+    qr.decodeFromCamera(video, resultHandler);
+    // attach some event handlers to reset and
+    // stop whenever we want.
+    reset.onclick = function () {
+      qr.decodeFromCamera(video, resultHandler);
+    };
+    stop.onclick = function () {
+      qr.stop();
+    };
+  })();
+  </script>
+</body>
+</html>
