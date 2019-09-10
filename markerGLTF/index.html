@@ -1,0 +1,18 @@
+<html>
+	 <script src="https://aframe.io/releases/0.7.0/aframe.js"></script>
+         <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;' >
+    <a-marker preset="hiro">
+			 <a-entity
+      id="drone"
+      position="0 0 -1"
+      scale="1 1 1" 
+      gltf-model-next="src: url(buster_drone/scene.gltf);"
+animation-mixer="clip: BusterDrone; loop:once"
+>
+</a-entity>
+    </a-marker>
+	</a-scene>
+</body>
+</html>
