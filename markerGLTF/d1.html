@@ -1,0 +1,30 @@
+
+
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+<script src="https://akashkuttappa.github.io/js/aframe-extras.loaders.min.js"></script>
+<script src="https://akashkuttappa.github.io/js/aframe-ar.js"></script>
+<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene embedded artoolkit='sourceType: webcam;'>
+    <a-entity id="cameraPos" camera mouse-cursor>
+    </a-entity>
+    <a-marker preset='kanji' value='6'>
+
+
+<a-entity >
+      <a-entity
+      id="drone"
+      position="0 0 -1"
+      scale="1 1 1"
+      gltf-model-next="src: url(https://akashkuttappa.github.io/models/busterDrone.gltf);"
+      animation-mixer="clip: BusterDrone"
+      >
+      </a-entity>
+
+    </a-entity>
+    </a-marker>
+
+
+  </a-scene>
