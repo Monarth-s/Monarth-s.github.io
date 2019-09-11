@@ -1,0 +1,22 @@
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.js">
+</script>  
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false;'>
+      <a-entity light="type: ambient; intensity: 4;"></a-entity>
+      <a-marker type='pattern' url='https://rawgit.com/germanviscuso/AR.js/master/data/data/patt.gafas'>
+        <a-gltf-model src="https://rawgit.com/germanviscuso/AR.js/master/three.js/examples/models/oculus_rift_cv1/scene.gltf" scale="0.37 0.37 0.37" position="0 0.75 0" sound="on: model-loaded; src: url(https://rawgit.com/germanviscuso/AR.js/master/three.js/examples/sounds/Bloom_-_10_-_Temperance.mp3); autoplay: true; loop: true">
+          <a-animation attribute = "rotation"
+               dur = "10000"
+               from = "-90 0 0"
+               to = "270 0 0"
+               easing = "linear"
+               repeat="indefinite"
+          </a-animation>
+        </a-gltf-model>
+      </a-marker>
+      <a-camera-static/>
+    </a-scene>
+</body>
